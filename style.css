@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color:rgba(196, 190, 190, 0.959);
+  --secondary-color: #373b69;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  left: 1rem;
+  align-self: center;
+  color:tomato; 
+  font-size: x-large; 
+  cursor: pointer;
+} 
+
+.search {
+  background-color:none;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color:bla;
+}
+
+.search::placeholder {
+  color:black;
+}
+
+.search:focus {
+  outline:none;
+  background-color:rgb(193, 218, 238);
+  color:black;
+ 
+}
+
+/*h1 content 10 ten movies*/
+h1{
+  display: inline-block;
+  font-family: sans-serif;
+  justify-content: flex-start;
+  margin-left:1rem;
+  border-bottom: 3px solid #373b69;
+  color: rgb(170, 77, 43);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 3rem 2rem 1rem 1rem;
+  border-radius: 24px;
+background: hsla(212, 56%, 46%, 0.705);
+box-shadow:  -11px 11px 22px #8f8e8e,
+             11px -11px 22px #d3d0d0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: #888ee7;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: #fff9ef;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #cf6868;
+  color: white;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
